@@ -1,3 +1,5 @@
+import StyledContainer from "./styled/Container.styled";
+
 export default function Container(props) {
-  return <div>{ props.children }</div>
+  return <StyledContainer>{ props.children }</StyledContainer>
 }
