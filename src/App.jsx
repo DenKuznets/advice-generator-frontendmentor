@@ -16,10 +16,11 @@ function App() {
 
   useEffect(() => {
     // РАБОЧАЯ API версия
-    // getAdvice().then(result => {
-    //   setAdvice(result)
-    // })
-    setAdvice(data);
+    getAdvice().then(result => {
+      setAdvice(result)
+    })
+    // Локальная версия для тестов
+    // setAdvice(data);
   }, []);
 
   return (
@@ -29,7 +30,14 @@ function App() {
           <Container>
             <Header adviceId={advice.id} />
             <Main theme={theme} adviceText={advice.advice} />
-            <Footer />
+            <Footer
+              onClick={() => {
+                console.log('click')
+                getAdvice().then(result => {
+                  setAdvice(result)
+                })
+              }}
+            />
           </Container>
         </ThemeProvider>
       ) : (

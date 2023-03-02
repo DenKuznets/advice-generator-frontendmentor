@@ -1,8 +1,8 @@
 import StyledFooter from "./styled/Footer.styled";
 
-export default function Footer() {
+export default function Footer(props) {
   return (
-    <StyledFooter>
+    <StyledFooter onClick={props.onClick}>
       <img src="./images/icon-dice.svg" alt="die" />
     </StyledFooter>
   );
