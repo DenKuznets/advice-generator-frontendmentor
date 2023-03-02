@@ -71,6 +71,9 @@ Error generating stack: `+i.message+`
     margin-bottom: 0.7em;
     text-align: center;
     line-height: 1.2;
+    @media (min-width: ${e=>e.theme.desktop}) {      
+      margin-bottom: 1.3em;
+     }
   }
 `;function hm(e){return lr(pm,{children:[lr("p",{children:['"',e.adviceText,'"']}),lr("picture",{children:[Be("source",{media:`(min-width: ${e.theme.desktop})`,srcSet:"./images/pattern-divider-desktop.svg"}),Be("img",{src:"./images/pattern-divider-mobile.svg",alt:""})]})]})}const mm=yi.div`
   display: flex;
