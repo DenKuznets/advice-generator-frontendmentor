@@ -32,7 +32,6 @@ function App() {
             <Main theme={theme} adviceText={advice.advice} />
             <Footer
               onClick={() => {
-                console.log('click')
                 getAdvice().then(result => {
                   setAdvice(result)
                 })

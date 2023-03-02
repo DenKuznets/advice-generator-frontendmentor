@@ -1,9 +1,6 @@
 import StyledMain from "./styled/Main.styled";
 
-export default function Main(props) {
-  console.log(props);
-  
-
+export default function Main(props) { 
   return (
     <StyledMain>
       <p>"{props.adviceText}"</p>
