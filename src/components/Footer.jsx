@@ -1,5 +1,9 @@
+import StyledFooter from "./styled/Footer.styled";
+
 export default function Footer() {
   return (
-    <footer>DIE IMG</footer>
-  )
+    <StyledFooter>
+      <img src="./images/icon-dice.svg" alt="die" />
+    </StyledFooter>
+  );
 }

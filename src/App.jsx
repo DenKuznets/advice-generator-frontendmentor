@@ -6,9 +6,13 @@ import Header from "./components/Header";
 import Main from "./components/Main";
 import Container from "./components/Container";
 import Footer from "./components/Footer";
+import { ThemeProvider } from "styled-components";
 
 function App() {
   const [advice, setAdvice] = useState("");
+  const theme = {
+    desktop: "768px",
+  };
 
   useEffect(() => {
     // РАБОЧАЯ API версия
@@ -21,11 +25,13 @@ function App() {
   return (
     <div className="App">
       {advice ? (
-        <Container>
-          <Header adviceId={advice.id} />
-          <Main adviceText={advice.advice} />
-          <Footer />
-        </Container>
+        <ThemeProvider theme={theme}>
+          <Container>
+            <Header adviceId={advice.id} />
+            <Main theme={theme} adviceText={advice.advice} />
+            <Footer />
+          </Container>
+        </ThemeProvider>
       ) : (
         "asking for advice"
       )}
