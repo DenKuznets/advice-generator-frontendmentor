@@ -10,8 +10,7 @@ const StyledFooter = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  top: 50px;
+  transform: translate(0, 50%);
 `;
 
 export default StyledFooter
