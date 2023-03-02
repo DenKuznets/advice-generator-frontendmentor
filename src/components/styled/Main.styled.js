@@ -15,6 +15,9 @@ const StyledMain = styled.main`
     margin-bottom: 0.7em;
     text-align: center;
     line-height: 1.2;
+    @media (min-width: ${(props) => props.theme.desktop}) {      
+      margin-bottom: 1.3em;
+     }
   }
 `;
 
